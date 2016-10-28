@@ -12,7 +12,7 @@
 
                 <fest:for iterate="data.fields" index="i" value="field">
                     <div class="grid__row grid__padding7" flex="1">
-                        <input type="{field.type || 'text'}" name="{field.name}" placeholder="{field.placeholder} "/>
+                        <input required= '' type="{field.type || 'text'}" name="{field.name}" placeholder="{field.placeholder} "/>
                     </div>
                 </fest:for>
                 <div class="grid__row " flex="1">
