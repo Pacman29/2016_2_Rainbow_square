@@ -5,7 +5,6 @@
   "main": "server.js",
   "scripts": {
     "heroku-postbuild": "npm run fest; ./node_modules/.bin/webpack --config=webpack.heroku.config.js",
-    "test": "node test.js",
     "fest": "./node_modules/.bin/fest-build --dir=public/components/",
     "webpack": "./node_modules/.bin/webpack",
     "karma:start": "karma start",
