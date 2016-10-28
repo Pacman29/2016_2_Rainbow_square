@@ -2,8 +2,7 @@
     <form>
         <div class="grid">
                 <div class="grid__row" flex="1">
-                    <img src="../../data/images/rainbow-square.gif" alt="лого" align="middle" width="6%"
-                         height="6%"></img>
+                    <img src="../../data/images/rainbow-square.gif" class = "logo"></img>
                 </div>
                 <div class="grid__row " flex="2">
                     <h1>

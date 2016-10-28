@@ -1,12 +1,11 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="data">
     <div class="grid">
         <div class="grid__row flex_center" flex="1">
-            <img src="../../data/images/rainbow-square.gif" alt="лого" align="middle" width="6%"
-                 height="6%"></img>
+            <img src="../../data/images/rainbow-square.gif" class = "logo"></img>
         </div>
         <div class="grid__row flex_center" flex="1">
-            <br></br>
-            <br></br>
+            <br/>
+            <br/>
         </div>
         <ol class="menu">
             <fest:for iterate="data.fields" index="i" value="field">
