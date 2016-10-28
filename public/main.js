@@ -2,6 +2,7 @@
 
 import Router from "./modules/router.js"
 import MainMenuView from "./views/mainMenu.js"
+import RedirectToMainMenu from "./views/redirectToMainMenu.js"
 import LoginView from "./views/login.js"
 import SinglePlayerView from "./views/singlePlayer.js"
 import RegisterView from  "./views/register"
@@ -18,7 +19,7 @@ window.onload = function () {
       .addRoute('/register', RegisterView)
       .addRoute('/singlePlayer', SinglePlayerView)
       .addRoute('/login', LoginView)
-      .addRoute('/', MainMenuView)
+      .addRoute('/', RedirectToMainMenu)
       .start();
   }
 
