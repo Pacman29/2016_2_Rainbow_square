@@ -1,12 +1,12 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   entry: {
-    'main': ["./public/main.js"],
-    
+    'superfile': ["./public/main.js"],
+    'test':["./public/tests/route.spec.js"]
   },
   output: {
     path: "./public/build",
-    filename: "superfile.js"
+    filename: "[name].js",
   },
   watch: true,
   devtool: "source-map",
