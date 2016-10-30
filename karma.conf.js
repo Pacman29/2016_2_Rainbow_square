@@ -9,12 +9,12 @@ module.exports = function (config) {
 		frameworks: ['jasmine'],
 
 		files: [
-			'./public/build/*.js',
+			'./public/build/test*.js',
 		],
 
 		reporters: ['progress', 'coverage'],
 		preprocessors: {
-			'./public/build/*.js':['coverage']
+			'./public/build/test*.js':['coverage']
 		},
 
 		port: 9876,
