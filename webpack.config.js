@@ -8,7 +8,7 @@ module.exports = {
     path: "./public/build",
     filename: "[name].js",
   },
-  watch: true,
+  watch: false,
   devtool: "source-map",
   module: {
     loaders: [
