@@ -31,7 +31,6 @@ export default class Model {
 
   fetch() {
     return this.send('GET', { id: this.attributes.id })
-      .then(data => JSON.parse(data))
       .then(json => {
         this.attributes = json;
         return this.attributes;
@@ -42,7 +41,6 @@ export default class Model {
     const method = this.attributes.id ? 'PUT' : 'POST';
 
     return this.send(method, this.attributes)
-      .then((data => JSON.parse(data)))
       .then(json => {
         return this.attributes;
       });
@@ -66,7 +64,12 @@ export default class Model {
       xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
-            resolve(xhr.responseText);
+            let data = JSON.parse(xhr.responseText);
+            if (data.code === 0) {
+              resolve(data.content);
+            } else {
+              reject(data);
+            }
           } else {
             reject();
           }
