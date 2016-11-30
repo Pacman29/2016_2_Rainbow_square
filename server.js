@@ -28,3 +28,4 @@ app.get('/singlePlayer', pseudoUrlHandler);
 app.get('/play', pseudoUrlHandler);
 app.get('/playchoose', pseudoUrlHandler);
 app.get('/scores', pseudoUrlHandler);
+app.get('/multiPlayer', pseudoUrlHandler);
