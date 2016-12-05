@@ -19,7 +19,7 @@ export default class GameField extends Block {
     for (let i = 0; i < newSize.h; i++) {
       for (let j = 0; j < newSize.w; j++) {
         let newCell = new GameFieldCell();
-        this.cells.set(newCell, {'x': j, 'y': i});
+        this.cells.set(JSON.stringify({'x': j, 'y': i}), newCell);
         this.append(newCell);
       }
     }
@@ -33,17 +33,21 @@ export default class GameField extends Block {
 
   clear() {
     this.cells.forEach( (val, key) => {
-      key._el.remove();
+      val._el.remove();
     });
     this.cells.clear();
   }
 
   setHandler(handler) {
     this.cells.forEach( (val, key) => {
-      key.on('click', function () {
-        handler(val);
+      val.on('click', function () {
+        handler(JSON.parse(key));
       });
     });
   }
 
+  getCell(pos) {
+    let pos_str = JSON.stringify(pos);
+    return this.cells.get(pos_str);
+  }
 }
