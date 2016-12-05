@@ -1,6 +1,9 @@
 .gameFieldCell {
   display: inline-block;
   border: 1px solid;
-  background-color: red;
   box-sizing: border-box;
 }
+
+.gameFieldCell_1 { background-image: url(/data/images/a.png); }
+.gameFieldCell_2 { background-image: url(/data/images/b.png); }
+.gameFieldCell_3 { background-image: url(/data/images/g.png); }
