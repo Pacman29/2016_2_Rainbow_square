@@ -63,7 +63,7 @@ export default class GameMPLogic {
 
   redrawFields(data) {
     let playerMatrix = data.playerMatrix;
-    let targetMatrix = data.targetMatrix;
+    let targetMatrix = data.target;
     this.setFieldMatrix(this._field, playerMatrix);
     this.setFieldMatrix(this._targetField, targetMatrix);
     this._field.setHandler(this.onCellClick.bind(this));
