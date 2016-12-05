@@ -1,6 +1,7 @@
 import View from "../modules/view"
 import Block from "../components/block/block.js";
 import GameField from "../components/gameField/gameField.js";
+import GameLogic from "../modules/gameLogic.js";
 
 export  default  class SinglePlayerView extends View {
   constructor(options = {}) {
@@ -13,13 +14,15 @@ export  default  class SinglePlayerView extends View {
     let container = document.querySelector('.content_container');
     let gameContainer = new Block('div');
     let gameField = new GameField();
-    gameField.setSize({ w: 5, h: 5 });
-    gameField.setHandler(function (pos) {
-      console.log(`pos: x=${pos.x} y=${pos.y}`);
-    });
     gameField.renderTo(gameContainer._get());
     gameContainer.renderTo(container);
     this._el = gameContainer._get();
+    let gameInstance = new GameLogic(gameField);
+    gameInstance.newGame({
+      "maxValue": 3,
+      "size": {"w": 4, "h": 4 },
+      "cells": [],
+    })
   }
 
   resume(options = {}) {
