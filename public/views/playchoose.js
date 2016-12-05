@@ -48,7 +48,7 @@ export  default  class PlayChooseView extends View {
     play.appendChild(this._leaderbord._el);
 
     this._leaderbord.on('click', event => {
-      this.router.go('/scores');
+      this.router.go('/multiPlayer');
     });
 
 
