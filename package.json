@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "karma start --single-run",
+    "test1": "karma start --single-run",
     "fest": "./node_modules/.bin/fest-build --dir=public/components/",
     "webpack": "./node_modules/.bin/webpack",
     "karma:start": "karma start",
